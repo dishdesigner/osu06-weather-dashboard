@@ -20,15 +20,16 @@
   <title>Weather Dashboard</title>
 </head>
 
-<body>
+<body class="h-100">
 
-  <div class="row px-2 flex-md-wrap">
+  <div class="row px-2 flex-wrap">
     <!----------------
     LEFT COLUMN SEARCH & SEARCH HISTORY
     ------------->
-    <div id="search-column" class="col-4 p-3 bg-secondary">
+    <div id="search-column" class="col-12 col-lg-4 p-3 bg-secondary">
+      <h1>Weather Dashboard</h1>
       <div id="searchBox" class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Search for City" aria-label="Search for City"
+        <input type="text" class="form-control" placeholder="City" aria-label="Search for City"
           aria-describedby="button-addon2">
         <div class="input-group-append">
           <button class="btn btn-warning" type="button" id="searchButton">Search</button>
@@ -45,7 +46,7 @@
     <!----------------
       RIGHT COLUMN CURRENT WEATHER & FORECAST
       ------------->
-    <div id="weather-display-column" class="col-8 p-3 bg-dark">
+    <div id="weather-display-column" class="col-12 col-lg-8 p-3 bg-dark">
       <!--CITY'S CURRENT DATE & TIME + WEATHER-->
       <div id="row-current-weather">
         <div class="card" id="current-weather-card">
@@ -61,12 +62,12 @@
           </div>
         </div>
       </div>
-      <h5>5-Day Forecast</h5>
+      <h5 class="reverse">5-Day Forecast</h5>
       <!--CITY'S FORECAST CARDS-->
-      <div class="d-flex flex-md-wrap justify-content-between" id="row-forecast">
-        <div class="card bg-light mb-3" id="1">
+      <div class="d-flex flex-wrap justify-content-between" id="row-forecast">
+        <div class="card d-inline-block bg-light mx-2 mb-3" id="1">
           <div class="card-header">
-            <p class="date">Forecast Day 1 Date</p>
+            <p class="date">03/04/2021</p>
           </div>
           <div class="card-body">
             <p class="card-text"><img class="icon"
@@ -76,9 +77,9 @@
             <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
           </div>
         </div>
-        <div class="card bg-light mb-3" id="2">
+        <div class="card d-inline-block bg-light mx-2 mb-3" id="2">
           <div class="card-header">
-            <p class="date">Forecast Day 2 Date</p>
+            <p class="date">03/05/2021</p>
           </div>
           <div class="card-body">
             <p class="card-text"><img class="icon"
@@ -88,9 +89,9 @@
             <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
           </div>
         </div>
-        <div class="card bg-light mb-3" id="3">
+        <div class="card d-inline-block bg-light mx-2 mb-3" id="3">
           <div class="card-header">
-            <p class="date">Forecast Day 3 Date</p>
+            <p class="date">03/06/2021</p>
           </div>
           <div class="card-body">
             <p class="card-text"><img class="icon"
@@ -100,9 +101,9 @@
             <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
           </div>
         </div>
-        <div class="card bg-light mb-3" id="4">
+        <div class="card d-inline-block bg-light mx-2 mb-3" id="4">
           <div class="card-header">
-            <p class="date">Forecast Day 4 Date</p>
+            <p class="date">03/07/2021</p>
           </div>
           <div class="card-body">
             <p class="card-text"><img class="icon"
@@ -112,9 +113,9 @@
             <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
           </div>
         </div>
-        <div class="card bg-light mb-3" id="5">
+        <div class="card d-inline-block bg-light mx-2 mb-3" id="5">
           <div class="card-header">
-            <p class="date">Forecast Day 5 Date</p>
+            <p class="date">03/08/2021</p>
           </div>
           <div class="card-body">
             <p class="card-text"><img class="icon"

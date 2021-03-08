@@ -20,119 +20,112 @@
   <title>Weather Dashboard</title>
 </head>
 
-<body class="row container-fluid">
-  <!----------------
-  LEFT COLUMN SEARCH & SEARCH HISTORY
-  ------------->
-  <div id="search-column" class="col-4 bg-secondary">
-    <div id="searchBox" class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Search for City" aria-label="Search for City"
-        aria-describedby="button-addon2">
-      <div class="input-group-append">
-        <button class="btn btn-warning" type="button" id="searchButton">Search</button>
-      </div>
-    </div>
-    <ul class="list-group">
-      <li class="list-group-item">Searched city #1</li>
-      <li class="list-group-item">Searched city #2</li>
-      <li class="list-group-item">Searched city #3</li>
-      <li class="list-group-item">Searched city #4</li>
-      <li class="list-group-item">Searched city #5</li>
-    </ul>
-  </div>
+<body>
 
-  <!----------------
-    RIGHT COLUMN CURRENT WEATHER & FORECAST
+  <div class="row px-2 flex-md-wrap">
+    <!----------------
+    LEFT COLUMN SEARCH & SEARCH HISTORY
     ------------->
-  <div id="weather-display-column" class="col-8 bg-dark">
-
-    <!--SEARCHED CITY'S CURRENT DATE & TIME + WEATHER-->
-    <div id="row-current-weather">
-      <div class="card" id="current-weather-card">
-        <div class="card-body">
-          <h5 class="card-title">Atlanta (03-03-2021)&emsp;<img id="icon-current"
-              src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
-          </h5>
-          <p class="card-text">Temperature: <span class="current-temp">90.9</span> &deg;F</p>
-          <p class="card-text">Humidity: <span class="current-humidity">41</span>%</p>
-          <p class="card-text">Wind Speed: <span class="current-windspeed">4.7</span> MPH</p>
-          <p class="card-text">UV Index: <span class="current-uvindex">1.5</span>&ensp;<span
-              class="current-uvindex-badge badge badge-pill badge-info">Low Risk</span></p>
+    <div id="search-column" class="col-4 p-3 bg-secondary">
+      <div id="searchBox" class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search for City" aria-label="Search for City"
+          aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-warning" type="button" id="searchButton">Search</button>
+        </div>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">Searched city #1</li>
+        <li class="list-group-item">Searched city #2</li>
+        <li class="list-group-item">Searched city #3</li>
+        <li class="list-group-item">Searched city #4</li>
+        <li class="list-group-item">Searched city #5</li>
+      </ul>
+    </div>
+    <!----------------
+      RIGHT COLUMN CURRENT WEATHER & FORECAST
+      ------------->
+    <div id="weather-display-column" class="col-8 p-3 bg-dark">
+      <!--CITY'S CURRENT DATE & TIME + WEATHER-->
+      <div id="row-current-weather">
+        <div class="card" id="current-weather-card">
+          <div class="card-body">
+            <h5 class="card-title">Atlanta (03-03-2021)&emsp;<img id="icon-current"
+                src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
+            </h5>
+            <p class="card-text">Temperature: <span class="current-temp">90.9</span> &deg;F</p>
+            <p class="card-text">Humidity: <span class="current-humidity">41</span>%</p>
+            <p class="card-text">Wind Speed: <span class="current-windspeed">4.7</span> MPH</p>
+            <p class="card-text">UV Index: <span class="current-uvindex">1.5</span>&ensp;<span
+                class="current-uvindex-badge badge badge-pill badge-info">Low Risk</span></p>
+          </div>
+        </div>
+      </div>
+      <h5>5-Day Forecast</h5>
+      <!--CITY'S FORECAST CARDS-->
+      <div class="d-flex flex-md-wrap justify-content-between" id="row-forecast">
+        <div class="card bg-light mb-3" id="1">
+          <div class="card-header">
+            <p class="date">Forecast Day 1 Date</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><img class="icon"
+                src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
+            </p>
+            <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
+            <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
+          </div>
+        </div>
+        <div class="card bg-light mb-3" id="2">
+          <div class="card-header">
+            <p class="date">Forecast Day 2 Date</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><img class="icon"
+                src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
+            </p>
+            <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
+            <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
+          </div>
+        </div>
+        <div class="card bg-light mb-3" id="3">
+          <div class="card-header">
+            <p class="date">Forecast Day 3 Date</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><img class="icon"
+                src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
+            </p>
+            <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
+            <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
+          </div>
+        </div>
+        <div class="card bg-light mb-3" id="4">
+          <div class="card-header">
+            <p class="date">Forecast Day 4 Date</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><img class="icon"
+                src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
+            </p>
+            <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
+            <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
+          </div>
+        </div>
+        <div class="card bg-light mb-3" id="5">
+          <div class="card-header">
+            <p class="date">Forecast Day 5 Date</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><img class="icon"
+                src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
+            </p>
+            <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
+            <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
+          </div>
         </div>
       </div>
     </div>
-
-    <h5>5-Day Forecast</h5>
-
-    <!--CURRENT CITY'S FORECAST CARDS-->
-    <div class="d-flex justify-content-between" id="row-forecast">
-
-      <div class="card bg-light mb-3" id="1">
-        <div class="card-header">
-          <p class="date">Forecast Day 1 Date</p>
-        </div>
-        <div class="card-body">
-          <p class="card-text"><img class="icon"
-              src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
-          </p>
-          <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
-          <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
-        </div>
-      </div>
-      <div class="card bg-light mb-3" id="2">
-        <div class="card-header">
-          <p class="date">Forecast Day 2 Date</p>
-        </div>
-        <div class="card-body">
-          <p class="card-text"><img class="icon"
-              src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
-          </p>
-          <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
-          <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
-        </div>
-      </div>
-
-      <div class="card bg-light mb-3" id="3">
-        <div class="card-header">
-          <p class="date">Forecast Day 3 Date</p>
-        </div>
-        <div class="card-body">
-          <p class="card-text"><img class="icon"
-              src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
-          </p>
-          <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
-          <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
-        </div>
-      </div>
-
-      <div class="card bg-light mb-3" id="4">
-        <div class="card-header">
-          <p class="date">Forecast Day 4 Date</p>
-        </div>
-        <div class="card-body">
-          <p class="card-text"><img class="icon"
-              src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
-          </p>
-          <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
-          <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
-        </div>
-      </div>
-
-      <div class="card bg-light mb-3" id="5">
-        <div class="card-header">
-          <p class="date">Forecast Day 5 Date</p>
-        </div>
-        <div class="card-body">
-          <p class="card-text"><img class="icon"
-              src="https://www.clipartmax.com/png/middle/228-2280519_rain-cloud-icon-partly-cloudy-weather-icon.png">
-          </p>
-          <p class="card-text">Temp: <span class="temp">XX.X</span> &deg;F</p>
-          <p class="card-text">Humidity: <span class="humidity">XX</span>%</p>
-        </div>
-      </div>
-
-    </div>
-
   </div>
 
   <!----------------------------------
